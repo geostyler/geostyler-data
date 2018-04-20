@@ -1,2 +1,3 @@
 # geostyler-data
-Data declaration files for the GeoStyler project
+
+TypeScript Declaration File for the Data models of the [GeoStyler](https://github.com/terrestris/geostyler) project.
