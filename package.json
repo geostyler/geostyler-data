@@ -43,6 +43,6 @@
     "transform": {
       "\\.(ts)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "/src/.*\\.spec.(ts|js)$"
+    "testRegex": "/.*\\.spec.(ts|js)$"
   }
 }
