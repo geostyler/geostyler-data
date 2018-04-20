@@ -5,7 +5,7 @@
   "main": "src/@types/geostyler-data/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chrismayer/geostyler-data.git"
+    "url": "git+https://github.com/terrestris/geostyler-data.git"
   },
   "keywords": [
     "geostyler",
@@ -17,9 +17,9 @@
   "author": "",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/chrismayer/geostyler-data/issues"
+    "url": "https://github.com/terrestris/geostyler-data/issues"
   },
-  "homepage": "https://github.com/chrismayer/geostyler-data#readme",
+  "homepage": "https://github.com/terrestris/geostyler-data#readme",
   "dependencies": {},
   "scripts": {
     "pretest": "npm run lint",
