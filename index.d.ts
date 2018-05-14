@@ -136,8 +136,5 @@ export interface DataParser {
    *
    * @param inputData
    */
-  readData(inputData: any): Data;
+  readData(inputData: any): Promise<Data>;
 }
-
-
-
