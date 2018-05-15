@@ -24,13 +24,15 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "jest",
-    "lint": "tslint --project tsconfig.json --config tslint.json"
+    "lint": "tslint --project tsconfig.json --config tslint.json",
+    "release": "np --no-yarn"
   },
   "devDependencies": {
     "@types/geojson": "7946.0.3",
     "@types/jest": "22.2.3",
     "@types/node": "10.0.9",
     "jest": "22.4.3",
+    "np": "2.20.1",
     "ts-jest": "22.4.6",
     "tslint": "5.10.0",
     "typescript": "2.8.3"
