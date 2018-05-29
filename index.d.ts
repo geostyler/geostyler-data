@@ -116,11 +116,6 @@ export interface Data {
  */
 export interface DataParser {
   /**
-   * Constructor interface
-   */
-  new(): DataParser;
-
-  /**
    * The name of the Parser instance
    */
   name: string;
@@ -147,4 +142,11 @@ export interface DataParser {
    * @param inputData
    */
   readData(inputData: any): Promise<Data>;
+}
+
+export interface DataParserConstructable extends DataParser {
+  /**
+   * Constructor interface
+   */
+  new(): DataParser;
 }
