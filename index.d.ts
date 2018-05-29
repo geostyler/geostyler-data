@@ -116,6 +116,16 @@ export interface Data {
  */
 export interface DataParser {
   /**
+   * Constructor interface
+   */
+  new(): DataParser;
+
+  /**
+   * The name of the Parser instance
+   */
+  name: string;
+
+  /**
    * Optional projection of the input data,
    * e.g. 'EPSG:4326'
    *
