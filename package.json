@@ -1,6 +1,6 @@
 {
   "name": "geostyler-data",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "TypeScript Declaration File for the Data models of the GeoStyler project.",
   "main": "src/@types/geostyler-data/index.d.ts",
   "repository": {
