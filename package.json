@@ -29,13 +29,13 @@
   },
   "devDependencies": {
     "@types/geojson": "7946.0.3",
-    "@types/jest": "22.2.3",
-    "@types/node": "10.0.9",
-    "jest": "22.4.3",
-    "np": "2.20.1",
+    "@types/jest": "23.0.2",
+    "@types/node": "10.3.2",
+    "jest": "23.1.0",
+    "np": "3.0.4",
     "ts-jest": "22.4.6",
     "tslint": "5.10.0",
-    "typescript": "2.8.3"
+    "typescript": "2.9.1"
   },
   "jest": {
     "moduleFileExtensions": [
