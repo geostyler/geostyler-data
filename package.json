@@ -30,7 +30,7 @@
   "devDependencies": {
     "@types/geojson": "7946.0.3",
     "@types/jest": "23.1.0",
-    "@types/node": "10.3.3",
+    "@types/node": "10.3.4",
     "jest": "23.1.0",
     "np": "3.0.4",
     "ts-jest": "22.4.6",
