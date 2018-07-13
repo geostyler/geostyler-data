@@ -6,6 +6,7 @@
 // TypeScript Version: 2.8
 
 import { FeatureCollection, GeometryObject } from 'geojson';
+import { JSONSchema4TypeName } from 'json-schema';
 
 /**
  * Type represents a single property of an object according to JSON schema.
@@ -23,9 +24,9 @@ export type SchemaProperty = {
 
   /**
    * The data type of the described property / attribute
-   * @type {string}
+   * @type {JSONSchema4TypeName}
    */
-  type: string;
+  type: JSONSchema4TypeName;
 
   /**
    * The minimum value of the described property / attribute.
