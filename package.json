@@ -31,7 +31,7 @@
     "@types/node": "10.5.2",
     "@types/json-schema": "7.0.0",
     "@types/geojson": "7946.0.4",
-    "@types/jest": "23.1.6",
+    "@types/jest": "23.3.1",
     "jest": "23.1.0",
     "np": "3.0.4",
     "ts-jest": "23.0.1",
