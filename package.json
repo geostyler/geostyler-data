@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "10.10.1",
-    "@types/json-schema": "7.0.0",
+    "@types/json-schema": "7.0.1",
     "@types/geojson": "7946.0.4",
     "@types/jest": "23.3.2",
     "jest": "23.1.0",
