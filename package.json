@@ -28,7 +28,7 @@
     "release": "np --no-yarn"
   },
   "devDependencies": {
-    "@types/node": "10.10.3",
+    "@types/node": "10.11.3",
     "@types/json-schema": "7.0.1",
     "@types/geojson": "7946.0.4",
     "@types/jest": "23.3.2",
