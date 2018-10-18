@@ -25,7 +25,7 @@
     "pretest": "npm run lint",
     "test": "jest",
     "lint": "tslint --project tsconfig.json --config tslint.json",
-    "release": "np --no-yarn"
+    "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-data.git master --tags"
   },
   "devDependencies": {
     "@types/node": "10.12.0",
