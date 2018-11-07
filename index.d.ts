@@ -5,7 +5,7 @@
 // Definitions:
 // TypeScript Version: 2.8
 
-import { FeatureCollection, GeometryObject } from 'geojson';
+import { FeatureCollection, Geometry } from 'geojson';
 import { JSONSchema4TypeName } from 'json-schema';
 
 /**
@@ -109,7 +109,7 @@ export interface Data {
   /**
    * Example features of imported geo-data
    */
-  exampleFeatures: FeatureCollection<GeometryObject>;
+  exampleFeatures: FeatureCollection<Geometry>;
 }
 
 /**
