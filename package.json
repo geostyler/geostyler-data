@@ -1,6 +1,6 @@
 {
   "name": "geostyler-data",
-  "version": "0.5.1",
+  "version": "0.5.2-0",
   "description": "TypeScript Declaration File for the Data models of the GeoStyler project.",
   "main": "src/@types/geostyler-data/index.d.ts",
   "repository": {
@@ -20,7 +20,10 @@
     "url": "https://github.com/terrestris/geostyler-data/issues"
   },
   "homepage": "https://github.com/terrestris/geostyler-data#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@types/json-schema": "7.0.1",
+    "@types/geojson": "7946.0.4"
+  },
   "scripts": {
     "pretest": "npm run lint",
     "test": "jest",
@@ -28,10 +31,10 @@
     "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-data.git master --tags"
   },
   "devDependencies": {
-    "@types/node": "10.12.3",
-    "@types/json-schema": "7.0.1",
     "@types/geojson": "7946.0.4",
     "@types/jest": "23.3.9",
+    "@types/json-schema": "7.0.1",
+    "@types/node": "10.12.3",
     "jest": "23.1.0",
     "np": "3.0.4",
     "ts-jest": "23.0.1",
