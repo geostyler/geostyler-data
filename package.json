@@ -20,7 +20,10 @@
     "url": "https://github.com/terrestris/geostyler-data/issues"
   },
   "homepage": "https://github.com/terrestris/geostyler-data#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@types/json-schema": "7.0.1",
+    "@types/geojson": "7946.0.4"
+  },
   "scripts": {
     "pretest": "npm run lint",
     "test": "jest",
@@ -29,8 +32,6 @@
   },
   "devDependencies": {
     "@types/node": "10.12.2",
-    "@types/json-schema": "7.0.1",
-    "@types/geojson": "7946.0.4",
     "@types/jest": "23.3.9",
     "jest": "23.1.0",
     "np": "3.0.4",
