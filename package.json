@@ -31,8 +31,10 @@
     "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-data.git master --tags"
   },
   "devDependencies": {
-    "@types/node": "10.12.2",
+    "@types/geojson": "7946.0.4",
     "@types/jest": "23.3.9",
+    "@types/json-schema": "7.0.1",
+    "@types/node": "10.12.3",
     "jest": "23.1.0",
     "np": "3.0.4",
     "ts-jest": "23.0.1",
