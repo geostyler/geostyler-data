@@ -1,5 +1,5 @@
 import { FeatureCollection, Point, LineString, Polygon } from 'geojson';
-import { DataParser } from 'src/@types/geostyler-data';
+import { DataParser } from 'index';
 
 describe('Data', () => {
   it('can be created with schema and exampleFeatures', () => {
