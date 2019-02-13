@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/terrestris/geostyler-data#readme",
   "dependencies": {
-    "@types/json-schema": "7.0.2",
+    "@types/json-schema": "7.0.3",
     "@types/geojson": "7946.0.5"
   },
   "scripts": {
