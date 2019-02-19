@@ -1,9 +1,8 @@
-
 // Type definitions for GeoStyler Data Models
 // Project: https://github.com/terrestris/geostyler
 // Definitions by: Christian Mayer <https://github.com/chrismayer>
 // Definitions:
-// TypeScript Version: 2.8
+// TypeScript Version: 3.3.3
 
 import { FeatureCollection, Geometry } from 'geojson';
 import { JSONSchema4TypeName } from 'json-schema';
