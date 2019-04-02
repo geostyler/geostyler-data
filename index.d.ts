@@ -105,9 +105,9 @@ export type BandSchema = {
 };
 
 /**
- * Internal data object for imported geo data.
+ * BaseData object
  */
-export interface Data {
+export interface BaseData {
   /**
    * Schema of imported geo-data describing the properties / attributes
    *
@@ -120,7 +120,7 @@ export interface Data {
  * Internal data object for imported vector geo data.
  * Aggregates a data schema and some example data (FeatureCollection).
  */
-export interface VectorData extends Data {
+export interface VectorData extends BaseData {
   /**
    * Example features of imported geo-data
    */
@@ -131,7 +131,7 @@ export interface VectorData extends Data {
  * Internal data object for imported raster data.
  * Aggregates a data schema and some example data.
  */
-export interface RasterData extends Data {
+export interface RasterData extends BaseData {
   /**
    * Info on imported raster bands.
    * Each band should be a unique key with arbitrary subproperties.
@@ -139,6 +139,11 @@ export interface RasterData extends Data {
    */
   rasterBandInfo: {[bandname: string]: BandSchema }
 }
+
+/**
+ * Internal data object for imported geo data.
+ */
+export type Data = RasterData | VectorData;
 
 /**
  * Interface, which has to be implemented by all GeoStyler parser classes.
@@ -165,7 +170,7 @@ export interface DataParser {
    *
    * @param inputData
    */
-  readData(inputData: any): Promise<VectorData>|Promise<RasterData>;
+  readData(inputData: any): Promise<Data>;
 }
 
 export interface DataParserConstructable extends DataParser {
