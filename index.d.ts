@@ -78,7 +78,7 @@ export type DataSchema = {
   title?: string;
 
   /**
-   * Optional type definition for the described entity
+   * Type definition for the described entity
    *
    * @type {string}
    */
@@ -90,6 +90,18 @@ export type DataSchema = {
    * @type {[name: string]: SchemaProperty; }}
    */
   properties: { [name: string]: SchemaProperty };
+};
+
+/**
+ * Type represents the schema of imported raster-data,
+ * to have information about a single band.
+ *
+ * @type BandSchema
+ */
+export type BandSchema = {
+  minValue?: number;
+  maxValue?: number;
+  [key: string]: any;
 };
 
 /**
@@ -109,6 +121,13 @@ export interface Data {
    * Example features of imported geo-data
    */
   exampleFeatures: FeatureCollection<Geometry>;
+
+  /**
+   * Info on imported raster bands. Only used for raster data.
+   * Each band should be a unique key with arbitrary subproperties.
+   * These can include projections, statistics and other information.
+   */
+  rasterBandInfo?: {[bandname: string]: BandSchema }
 }
 
 /**
