@@ -106,28 +106,38 @@ export type BandSchema = {
 
 /**
  * Internal data object for imported geo data.
- * Aggregates a data schema and some example data (FeatureCollection).
  */
 export interface Data {
-
   /**
    * Schema of imported geo-data describing the properties / attributes
    *
    * @type {DataSchema}
    */
   schema: DataSchema;
+}
 
+/**
+ * Internal data object for imported vector geo data.
+ * Aggregates a data schema and some example data (FeatureCollection).
+ */
+export interface VectorData extends Data {
   /**
    * Example features of imported geo-data
    */
   exampleFeatures: FeatureCollection<Geometry>;
+}
 
+/**
+ * Internal data object for imported raster data.
+ * Aggregates a data schema and some example data.
+ */
+export interface RasterData extends Data {
   /**
-   * Info on imported raster bands. Only used for raster data.
+   * Info on imported raster bands.
    * Each band should be a unique key with arbitrary subproperties.
    * These can include projections, statistics and other information.
    */
-  rasterBandInfo?: {[bandname: string]: BandSchema }
+  rasterBandInfo: {[bandname: string]: BandSchema }
 }
 
 /**
@@ -155,7 +165,7 @@ export interface DataParser {
    *
    * @param inputData
    */
-  readData(inputData: any): Promise<Data>;
+  readData(inputData: any): Promise<VectorData>|Promise<RasterData>;
 }
 
 export interface DataParserConstructable extends DataParser {
