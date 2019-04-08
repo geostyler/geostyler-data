@@ -78,7 +78,7 @@ export type DataSchema = {
   title?: string;
 
   /**
-   * Optional type definition for the described entity
+   * Type definition for the described entity
    *
    * @type {string}
    */
@@ -93,23 +93,57 @@ export type DataSchema = {
 };
 
 /**
- * Internal data object for imported geo data.
- * Aggregates a data schema and some example data (FeatureCollection).
+ * Type represents the schema of imported raster-data,
+ * to have information about a single band.
+ *
+ * @type BandSchema
  */
-export interface Data {
+export type BandSchema = {
+  minValue?: number;
+  maxValue?: number;
+  [key: string]: any;
+};
 
+/**
+ * BaseData object
+ */
+export interface BaseData {
   /**
    * Schema of imported geo-data describing the properties / attributes
    *
    * @type {DataSchema}
    */
   schema: DataSchema;
+}
 
+/**
+ * Internal data object for imported vector geo data.
+ * Aggregates a data schema and some example data (FeatureCollection).
+ */
+export interface VectorData extends BaseData {
   /**
    * Example features of imported geo-data
    */
   exampleFeatures: FeatureCollection<Geometry>;
 }
+
+/**
+ * Internal data object for imported raster data.
+ * Aggregates a data schema and some example data.
+ */
+export interface RasterData extends BaseData {
+  /**
+   * Info on imported raster bands.
+   * Each band should be a unique key with arbitrary subproperties.
+   * These can include projections, statistics and other information.
+   */
+  rasterBandInfo: {[bandname: string]: BandSchema }
+}
+
+/**
+ * Internal data object for imported geo data.
+ */
+export type Data = RasterData | VectorData;
 
 /**
  * Interface, which has to be implemented by all GeoStyler parser classes.
