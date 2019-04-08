@@ -150,6 +150,10 @@ export type Data = RasterData | VectorData;
  */
 export interface DataParser {
   /**
+   * The name of the Parser instance
+   */
+  title: string;
+  /**
    * Optional projection of the input data,
    * e.g. 'EPSG:4326'
    *
@@ -171,15 +175,4 @@ export interface DataParser {
    * @param inputData
    */
   readData(inputData: any): Promise<Data>;
-}
-
-export interface DataParserConstructable extends DataParser {
-  /**
-   * Constructor interface
-   */
-  new(): DataParser;
-  /**
-   * The name of the Parser instance
-   */
-  title: string;
 }
