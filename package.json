@@ -21,16 +21,16 @@
   },
   "homepage": "https://github.com/terrestris/geostyler-data#readme",
   "dependencies": {
-    "@types/json-schema": "7.0.3",
-    "@types/geojson": "7946.0.7"
+    "@types/json-schema": "^7.0.3",
+    "@types/geojson": "^7946.0.7"
   },
   "scripts": {
     "lint": "tslint --project tsconfig.json --config tslint.json",
     "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-data.git master --tags"
   },
   "devDependencies": {
-    "np": "5.0.3",
-    "tslint": "5.12.1",
-    "typescript": "3.3.3"
+    "np": "^5.0.3",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
   }
 }
