@@ -1,5 +1,5 @@
 // Type definitions for GeoStyler Data Models
-// Project: https://github.com/terrestris/geostyler
+// Project: https://github.com/geostyler/geostyler
 // Definitions by: Christian Mayer <https://github.com/chrismayer>
 // Definitions:
 // TypeScript Version: 3.3.3

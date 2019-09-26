@@ -5,7 +5,7 @@
   "main": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terrestris/geostyler-data.git"
+    "url": "git+https://github.com/geostyler/geostyler-data.git"
   },
   "keywords": [
     "geostyler",
@@ -17,16 +17,16 @@
   "author": "",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/terrestris/geostyler-data/issues"
+    "url": "https://github.com/geostyler/geostyler-data/issues"
   },
-  "homepage": "https://github.com/terrestris/geostyler-data#readme",
+  "homepage": "https://github.com/geostyler/geostyler-data#readme",
   "dependencies": {
     "@types/json-schema": "^7.0.3",
     "@types/geojson": "^7946.0.7"
   },
   "scripts": {
     "lint": "tslint --project tsconfig.json --config tslint.json",
-    "release": "np --no-yarn && git push https://github.com/terrestris/geostyler-data.git master --tags"
+    "release": "np --no-yarn && git push https://github.com/geostyler/geostyler-data.git master --tags"
   },
   "devDependencies": {
     "np": "^5.0.3",
