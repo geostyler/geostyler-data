@@ -25,12 +25,16 @@
     "@types/geojson": "^7946.0.7"
   },
   "scripts": {
-    "lint": "tslint --project tsconfig.json --config tslint.json",
-    "release": "np --no-yarn && git push https://github.com/geostyler/geostyler-data.git master --tags"
+    "lint": "eslint -c .eslintrc.js --ext .ts . && tsc --noEmit",
+    "release": "np --no-yarn --no-tests && git push https://github.com/geostyler/geostyler-data.git master"
   },
   "devDependencies": {
+    "@terrestris/eslint-config-typescript": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
     "np": "^7.5.0",
-    "tslint": "^5.18.0",
     "typescript": "^4.2.4"
   }
 }
