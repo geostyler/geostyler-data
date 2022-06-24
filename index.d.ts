@@ -99,9 +99,9 @@ export type DataSchema = {
  * @type BandSchema
  */
 export type BandSchema = {
+  [key: string]: any;
   minValue?: number;
   maxValue?: number;
-  [key: string]: any;
 };
 
 /**
@@ -137,7 +137,7 @@ export interface RasterData extends BaseData {
    * Each band should be a unique key with arbitrary subproperties.
    * These can include projections, statistics and other information.
    */
-  rasterBandInfo: {[bandname: string]: BandSchema }
+  rasterBandInfo: {[bandname: string]: BandSchema };
 }
 
 /**
