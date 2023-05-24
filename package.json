@@ -36,5 +36,6 @@
     "eslint": "^8.18.0",
     "np": "^7.5.0",
     "typescript": "^4.2.4"
-  }
+  },
+  "funding": "https://opencollective.com/geostyler"
 }
