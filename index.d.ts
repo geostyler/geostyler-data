@@ -104,8 +104,6 @@ export type BandSchema = {
   maxValue?: number;
 };
 
-export type ScaleDenominator = Record<number, number>;
-
 /**
  * BaseData object
  */
@@ -121,7 +119,7 @@ export interface BaseData {
    * Scale denominators from data (tile matrix) or defined manually
    * @type {ScaleDenominator}
    */
-  scaleDenominators?: ScaleDenominator
+  scaleDenominators?: Record<number, number>;
 }
 
 /**
