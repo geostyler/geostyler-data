@@ -104,6 +104,8 @@ export type BandSchema = {
   maxValue?: number;
 };
 
+export type ScaleDenominators = Record<number, number>;
+
 /**
  * BaseData object
  */
@@ -119,11 +121,11 @@ export interface BaseData {
    * Scale denominators from data (tile matrix) or defined manually
    * @type {ScaleDenominator}
    */
-  scaleDenominators?: Record<number, number>;
+  scaleDenominators?: ScaleDenominators;
 }
 
 /**
- * Internal data object for imported vector geo data.
+ * Internal data object for imported vector geo data.git 
  * Aggregates a data schema and some example data (FeatureCollection).
  */
 export interface VectorData extends BaseData {
