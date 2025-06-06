@@ -104,6 +104,23 @@ export type BandSchema = {
   maxValue?: number;
 };
 
+/**
+ * Any object with scales: A scale is defined by a label (usually a zoom level or scale denominator) and
+ * a scale denominator
+ *
+ * Examples : {
+ *  0: 559082264.028717,
+ *  1: 279541132.014358
+ *  ...
+ * }
+ * or
+ * {
+ *    500: 500,
+ *    1000: 1000
+ *    ...
+ * }
+ *
+ */
 export type Scales = Record<number, number>;
 
 /**
