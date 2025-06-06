@@ -25,7 +25,8 @@
     "@types/geojson": "^7946.0.7"
   },
   "scripts": {
-    "lint": "eslint -c .eslintrc.js --ext .ts . && tsc --noEmit",
+    "lint": "eslint -c .eslintrc.js --ext .ts .",
+    "check": "tsc --noEmit",
     "release": "np --no-yarn --no-tests && git push https://github.com/geostyler/geostyler-data.git master"
   },
   "devDependencies": {
