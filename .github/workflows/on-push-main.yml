@@ -1,0 +1,52 @@
+name: Lint and generate-docs for geostyler-data
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout sources
+      uses: actions/checkout@v4
+
+    - name: Set up bun
+      uses: oven-sh/setup-bun@v2
+
+    - name: Install dependencies ⏬
+      run: bun install
+
+    - name: Lint code 💄
+      run: bun run lint
+
+    - name: Check code 🔍
+      run: bun run check
+
+    - name: Test code ✅
+      run: bun test
+
+  build_docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout sources
+      uses: actions/checkout@v4
+
+    - name: Set up bun
+      uses: oven-sh/setup-bun@v2
+
+    - name: Install dependencies ⏬
+      run: bun install
+
+    - name: Generate documentation 🏗️
+      run: bun run generate-docs
+
+    - name: Deploy (to docs/main) 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.6.1
+      with:
+        branch: gh-pages
+        folder: docs
+        target-folder: docs/main

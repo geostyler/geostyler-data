@@ -1,0 +1,33 @@
+name: Test build of geostyler-data
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22.x, 24.x]
+
+    steps:
+    - name: Checkout sources
+      uses: actions/checkout@v4
+
+    - name: Set up bun
+      uses: oven-sh/setup-bun@v2
+
+    - name: Install dependencies ⏬
+      run: bun install
+
+    - name: Lint code 💄
+      run: bun run lint
+
+    - name: Check code 🔍
+      run: bun run check
+
+    - name: Test code ✅
+      run: bun test
+
+    - name: Build artifacts 🏗️
+      run: bun run build
