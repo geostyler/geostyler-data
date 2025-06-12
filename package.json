@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "TypeScript Declaration File for the Data models of the GeoStyler project.",
   "main": "index.d.ts",
+  "types": "index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/geostyler/geostyler-data.git"
@@ -25,7 +26,8 @@
     "@types/geojson": "^7946.0.7"
   },
   "scripts": {
-    "lint": "eslint -c .eslintrc.js --ext .ts . && tsc --noEmit",
+    "lint": "eslint -c .eslintrc.js --ext .ts .",
+    "check": "tsc --noEmit",
     "release": "np --no-yarn --no-tests && git push https://github.com/geostyler/geostyler-data.git master"
   },
   "devDependencies": {
@@ -34,7 +36,12 @@
     "@typescript-eslint/eslint-plugin-tslint": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",
-    "np": "^7.5.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "^9.0.0",
+    "semantic-release": "^24.2.5",
     "typescript": "^4.2.4"
   },
   "funding": "https://opencollective.com/geostyler"

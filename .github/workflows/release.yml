@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - next
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources 🔰
+        uses: actions/checkout@v4
+
+      - name: Set up bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies ⏬
+        run: bun install
+
+      - name: Release 🚀
+        uses: cycjimmy/semantic-release-action@v4.1.0
+        id: semantic
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_RELEASE_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
