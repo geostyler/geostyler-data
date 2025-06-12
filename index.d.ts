@@ -105,8 +105,8 @@ export type BandSchema = {
 };
 
 /**
- * Any object with scales: A scale is defined by a label (usually a zoom level or scale denominator) and
- * a scale denominator
+ * An object containing scales: A scale is defined by a label (usually a zoom level
+ * or scale denominator) and a scale denominator.
  *
  * Examples : {
  *  0: 559082264.028717,
