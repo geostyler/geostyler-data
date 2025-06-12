@@ -121,7 +121,7 @@ export type BandSchema = {
  * }
  *
  */
-export type Scales = Record<number, number>;
+export type Scales = Record<string, number>;
 
 /**
  * BaseData object
