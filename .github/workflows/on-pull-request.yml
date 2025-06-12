@@ -28,6 +28,3 @@ jobs:
 
     - name: Test code ✅
       run: bun test
-
-    - name: Build artifacts 🏗️
-      run: bun run build

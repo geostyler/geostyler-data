@@ -20,9 +20,6 @@ jobs:
       - name: Install dependencies ⏬
         run: bun install
 
-      - name: Build artifacts 🏗️
-        run: bun run build
-
       - name: Release 🚀
         uses: cycjimmy/semantic-release-action@v4.1.0
         id: semantic
